@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investigação: Copyright ID do YouTube</title>
+<style>
+    body {
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:#f7f7f7;
+        color:#222;
+    }
+    header {
+        background:#ff0000;
+        padding:15px;
+        color:white;
+        text-align:center;
+        font-size:24px;
+        font-weight:bold;
+    }
+    nav {
+        background:#111;
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+    nav a {
+        color:white;
+        padding:10px 20px;
+        text-decoration:none;
+        display:block;
+        font-size:18px;
+    }
+    nav a:hover {
+        background:#ff0000;
+    }
+    section {
+        max-width:900px;
+        margin:auto;
+        padding:25px;
+        background:white;
+        margin-top:20px;
+        border-radius:10px;
+        box-shadow:0 0 10px #ccc;
+    }
+    h2 {
+        color:#ff0000;
+        margin-bottom:10px;
+    }
+
+
+    img.fluxograma {
+        width:100%;
+        border:1px solid #ccc;
+        border-radius:10px;
+        margin-bottom:20px;
+    }
+    .img-mockup {
+        width:100%;
+        height: 200px;x;
+        border:2px dashed #aaa;
+        border-radius:10px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color:#777;
+        font-size:18px;
+        margin-bottom:20px;
+    }
+    svg {
+        width:100%;
+        background:#fafafa;
+        border:1px solid #ccc;
+        border-radius:10px;
+        margin-bottom:20px;
+    }
+    .perfil {
+        display:flex;
+        gap:15px;
+        align-items:center;
+        margin-bottom:20px;
+    }
+    .perfil img {
+        width:90px;
+        height:90px;
+        border-radius:50%;
+        background:#ddd;
+    }
+    @media(max-width:600px){
+        nav a { font-size:14px; padding:8px; }
+        .perfil { flex-direction:column; text-align:center; }
+    }
+</style>
+</head>
+
+
+<body>
+
+
+
+
+<header>Investigação Digital — Sistema Copyright ID do YouTube</header>
+
+
+
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#logica">A Lógica</a>
+    <a href="#dados">Os Dados</a>
+    <a href="#visual">O Visual</a>
+    <a href="#impacto">Impacto Psicológico</a>
+    <a href="#sobre">Sobre Nós</a>
+</nav>
+
+
+
+
+<!-- ================= HOME ================= -->
+<section id="home">
+<h2>Home</h2>
+<p>
+Bem-vindo ao nosso relatório investigativo sobre o <b>Sistema de Copyright ID do YouTube</b>.  
+Aqui mostramos como a plataforma identifica automaticamente se um vídeo enviado contém conteúdo protegido por direitos autorais.
+</p>
+<p>
+Este site apresenta a lógica, os dados, as telas, a psicologia por trás da ferramenta e a identidade visual da nossa equipe.
+</p>
+</section>
+
+
+
+
+<!-- ================= LÓGICA ================= -->
+<section id="logica">
+<h2>A Lógica — Fluxograma do Copyright ID</h2>
+
+
+
+
+<p>A seguir está o fluxograma que representa como o YouTube decide se um vídeo deve ser marcado por direitos autorais.</p>
+
+
+
+
+<!-- FLUXOGRAMA SVG -->
+<img class="fluxograma" src="Start (1).png" alt="Descrição da imagem">
+
+
+
+
+
+
+
+
+
+
+<p><b>Explicação simples:</b>  
+Quando um vídeo é enviado, o sistema extrai o áudio e o vídeo e compara tudo com uma enorme biblioteca de conteúdos cadastrados pelos donos dos direitos.  
+Se houver coincidência suficiente, o sistema cria automaticamente uma reivindicação e aplica a ação configurada (bloquear, monetizar ou monitorar). Se não houver coincidência, o vídeo é publicado normalmente.</p>
+</section>
+
+
+
+
+<!-- ================= DADOS ================= -->
+<section id="dados">
+<h2>Os Dados — Modelo DER</h2>
+
+
+
+
+<p>A seguir está o modelo conceitual do banco de dados necessário para a funcionalidade do Copyright ID.</p>
+
+
+
+
+<svg height="480">
+
+
+
+
+    <!-- Tabela VIDEO -->
+    <rect x="50" y="50" width="150" height="150" fill="#fff" stroke="#000"/>
+    <text x="120" y="80"><b>VIDEO</b></text>
+    <text x="70" y="110">id_video</text>
+    <text x="70" y="130">titulo</text>
+    <text x="70" y="150">id_usuario</text>
+    <text x="70" y="170">hash_gerado</text>
+
+
+
+
+    <!-- Tabela CONTEUDO_REFERENCIA -->
+    <rect x="350" y="50" width="150" height="150" fill="#fff" stroke="#000"/>
+    <text x="420" y="80"><b>CONTEUDO_REFERENCIA</b></text>
+    <text x="370" y="110">id_referencia</text>
+    <text x="370" y="130">dono_direitos</text>
+    <text x="370" y="150">tipo</text>
+    <text x="370" y="170">hash_referencia</text>
+
+
+
+
+    <!-- Tabela CLAIM -->
+    <rect x="200" y="250" width="150" height="150" fill="#fff" stroke="#000"/>
+    <text x="330" y="280"><b>CLAIM</b></text>
+    <text x="220" y="310">id_claim</text>
+    <text x="220" y="330">id_video</text>
+    <text x="220" y="350">id_referencia</text>
+    <text x="220" y="370">acao_aplicada</text>
+
+
+
+
+    <!-- Relacionamentos -->
+    <line x1="175" y1="200" x2="350" y2="250" stroke="#000"/>
+    <line x1="500" y1="200" x2="350" y2="250" stroke="#000"/>
+</svg>
+
+
+
+
+<p>
+<b>Resumo:</b>  
+- <b>VIDEO</b> guarda dados do vídeo enviado pelo usuário.  
+- <b>CONTEUDO_REFERENCIA</b> guarda conteúdos oficiais protegidos.  
+- <b>CLAIM</b> representa as reivindicações criadas automaticamente.  
+</p>
+</section>
+
+
+
+
+<!-- ================= VISUAL ================= -->
+<section id="visual">
+<h2>O Visual — Mockups da Interface</h2>
+
+
+
+
+<div class="img-mockup">Mockup da Tela 1 — (Inserir aqui sua imagem)</div>
+<div class="img-mockup">Mockup da Tela 2 — (Inserir aqui sua imagem)</div>
+
+
+
+
+<p><b>Exemplo de anotação técnica:</b></p>
+<ul>
+    <li>“Este alerta vem da tabela CLAIM.acao_aplicada”.</li>
+    <li>“O título do vídeo vem de VIDEO.titulo”.</li>
+</ul>
+</section>
+
+
+
+
+<!-- ================= PSICOLOGIA ================= -->
+<section id="impacto">
+<h2>Análise de Impacto Psicológico</h2>
+
+
+
+
+<p>O Copyright ID funciona bem porque transmite ao usuário a sensação de <b>segurança e controle</b>.  
+Os criadores de conteúdo sentem que seus direitos estão protegidos, enquanto o YouTube evita problemas legais.</p>
+
+
+
+
+<p>Também utiliza o gatilho de <b>autoridade</b>: o sistema é automático, rápido e extremamente técnico, transmitindo credibilidade.  
+Além disso, reduz o esforço humano, um forte motivador psicológico — o algoritmo identifica trechos sem que o usuário precise fazer nada.</p>
+</section>
+
+
+
+
+<!-- ================= SOBRE NÓS ================= -->
+<section id="sobre">
+<h2>Sobre Nós</h2>
+
+
+
+
+<div class="perfil">
+    <img src="">
+    <div>
+        <h3>Integrante 1</h3>
+        <p>Especialista em Front-end & Lógica de Programação.</p>
+        <p>GitHub/LinkedIn: adicionar links</p>
+    </div>
+</div>
+
+
+
+
+<div class="perfil">
+    <img src="">
+    <div>
+        <h3>Integrante 2</h3>
+        <p>Designer Digital & Modelagem de Banco de Dados.</p>
+        <p>GitHub/LinkedIn: adicionar links</p>
+    </div>
+</div>
+
+
+
+
+</section>
+
+
+
+
+</body>
+</html>
+
+
